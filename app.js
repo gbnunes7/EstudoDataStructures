@@ -1,3 +1,6 @@
+// Estrutura de dados: Pilha -> Uma coleção de itens ordenadas que seguem o princípio LIFO - last in, first out. Exemplos: Uma pilha de livros, ou uma pilha de bandedeijas. Onde os elementos mais antigos são a base, e os elementos mais novos são o topo, pode ser feito com dois adt, um array ou um objeto.
+
+// Criação da Stack (pilha) por meio do método class
 class Stack {
     constructor() {
         this.items = []; //inicialização de items por array
@@ -28,8 +31,9 @@ class Stack {
     }
 }
 
-const stackDeLivros = new Stack()
+const stackDeLivros = new Stack() // Instanciando a minha pilha para uma constante.
 
+//testes para verificar se os métodos estão funcionando
 console.log(stackDeLivros.isEmpty())
 stackDeLivros.push(1)
 stackDeLivros.push(3)
