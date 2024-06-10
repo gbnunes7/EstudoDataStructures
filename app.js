@@ -46,3 +46,4 @@ stackDeLivros.push("André")
 stackDeLivros.peek();
 console.log(numero)
 console.log(stackDeLivros.size())
+
