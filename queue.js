@@ -57,3 +57,20 @@ class Queue {
         return objString // retorna os itens do meu objeto como String
     }
 }
+
+const filaDePessoas = new Queue() 
+
+
+filaDePessoas.enqueue("João") // adicionando elementos a fila
+filaDePessoas.enqueue("Márcio")
+filaDePessoas.enqueue("Joana")
+
+filaDePessoas.dequeue() // removendo elemento da fila (item com chave 0, primeiro a entrar)
+
+console.log(filaDePessoas)
+console.log(filaDePessoas.peek())
+console.log(filaDePessoas.toString())
+console.log(filaDePessoas.isEmpty())
+console.log(filaDePessoas.size())
+filaDePessoas.clear()
+console.log(filaDePessoas)
