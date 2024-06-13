@@ -68,9 +68,9 @@ filaDePessoas.enqueue("Joana")
 filaDePessoas.dequeue() // removendo elemento da fila (item com chave 0, primeiro a entrar)
 
 console.log(filaDePessoas)
-console.log(filaDePessoas.peek())
-console.log(filaDePessoas.toString())
-console.log(filaDePessoas.isEmpty())
-console.log(filaDePessoas.size())
-filaDePessoas.clear()
-console.log(filaDePessoas)
+console.log(filaDePessoas.peek()) // retornando proxímo elemento da fila (item com chave 1, depois do item com chave 0)
+console.log(filaDePessoas.toString()) // retornando fila para tipo String
+console.log(filaDePessoas.isEmpty()) // retornando se existe elementos na fila
+console.log(filaDePessoas.size()) // retornando tamanho da fila
+filaDePessoas.clear() // limpando a fila
+console.log(filaDePessoas) 
