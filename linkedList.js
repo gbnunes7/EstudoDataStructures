@@ -61,8 +61,57 @@ class LinkedList { // Criando a linked list
                 current = current.next // avançando para o próximo nó a cada iteração
             }
             return current //momento em que i chegou ao index e retornou o nó indexado
-         } 
-            return undefined // caso índice não exista, retorna undefined
-        }  
+        } 
+        return undefined // caso índice não exista, retorna undefined
+    }
+    
+    insert(element,index) { //método para inserir um element em determinado índice
+        if(index >= 0 && index <= this.count){ // validação do valor do index
+            const node = new Node(element)
+            if (index === 0) { // caso indice seja 0, o elemento node vira o head e o head vira node.next
+                const current = this.head
+                node.next = current
+                this.head = node
+            } else { // caso não, definimos o antecessor do index que queremos e fazemos a lógica para mudar de posição
+                const previous = this.getElementAt(index - 1)
+                const current = previous.next
+                node.next = current
+                previous.next = node
+            }
+            this.count ++ // incrementador
+            return true
+        }
+        return false  // caso index seja valor invalido      
     }
 
+    size() { // método para ver tamanho da linked list
+        return this.count
+    }
+
+    isEmpty() { // método para retornar se a linked list está vazia
+        return this.size() === 0
+    }
+
+    getHead() { // método para retornar a cabeça da linked list
+        return this.head
+    }
+
+    toString() { // método to string
+        if(this.head === null) {
+            return "";
+        } 
+        let objString = `${this.head.element}`
+        let current = this.head.next
+        for (let i = 1 ; i < this.size(); i++) {
+            objString = `${objString},${current.element}`
+            current = current.next
+        }
+        return objString
+    }
+}
+
+const ll = new LinkedList()
+ll.push("olá")
+ll.push("tudo bem?")
+ll.removeAt(1)
+console.log(ll.toString())
