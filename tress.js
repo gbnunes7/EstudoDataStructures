@@ -36,13 +36,13 @@ class BinarySearchTree { // criando classe BST
 	_insertNode(node, key) { // método auxiliar para inserir novo node, seguindo princípios da BST
 		if (key < node.key) { // verificação se o novo node(key) a ser inserido, é menor que o node pai. Caso seja, seguimos pra esquerda.
 			if (node.left === null) { // verificação se o node filho da esquerda (seguindo ordem da BST) está vazio.
-				node.left === key; // como ele é menor e o node filho da esquerda está vazio, ele é inserido na esquerda. Criando assim um caso de base.
+				node.left = new Node(key); // como ele é menor e o node filho da esquerda está vazio, ele é inserido na esquerda. Criando assim um caso de base.
 			} else { // caso ele não seja vazio, precisamos verificar a subarvore dele até achar um local para ser inserido, para isso usamos uma chamada recursiva.
 				this._insertNode(node.left, key); // chamada recursiva, que repete ela mesma até achar o caso de base, que nesse caso seria onde um node pai tem seu node left vazio, quando for true a chamada recursiva o node left seria atribuido com o valor de key
 			}
 		} else { // caso o node(key) a ser inserido seja maior que o node a ser comparado. (node pai). Como não é, seguimos pra direita.
 			if (node.right === null) { // verificação se a direita do node pai está vazia
-				node.right === key; // caso seja true, declara o filho a direita do pai como key, criada caso de base.
+				node.right = new Node(key); // caso seja true, declara o filho a direita do pai como key, criada caso de base.
 			} else { // caso o filho da direita já tenha um node, precisamos verificar a subárvore dele até achar um local para ser inserido, é usado a chamada recursiva;
 				this._insertNode(node.right, key); // chamada recursiva, chamando ela mesma até o caso de base se tornar true.
 			}
@@ -54,7 +54,7 @@ class BinarySearchTree { // criando classe BST
 	}
 
 	_searchNode(node, key) { // método auxiliar para fazer toda busca, onde "node" é o node atual que estamos e "key" o elemento a ser procurado.
-		if (this.root === null) { // validação se o root dessa bst existe, caso contrário retorna null
+		if (node === null) { // validação se o root dessa bst existe, caso contrário retorna null
 			return null;
 		}
 
@@ -152,3 +152,14 @@ class BinarySearchTree { // criando classe BST
     }
 
 }
+
+const tree = new BinarySearchTree()
+tree.insert(10)
+tree.insert(5)
+tree.insert(9)
+tree.insert(3)
+tree.insert(6)
+tree.insert(2)
+tree.insert(1)
+
+console.log(tree)
