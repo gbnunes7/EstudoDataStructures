@@ -151,10 +151,23 @@ class BinarySearchTree { // criando classe BST
         }
     }
 
+    printTree() {
+        this._printTree(this.root, "", true);
+    }
+
+    _printTree(node, indent, last) {
+        if (node !== null) {
+            console.log(indent + (last ? "└─ " : "├─ ") + node.key);
+            indent += last ? "   " : "|  ";
+            this._printTree(node.left, indent, false);
+            this._printTree(node.right, indent, true);
+        }
+    }
 }
 
 const tree = new BinarySearchTree()
 tree.insert(10)
+tree.insert(11)
 tree.insert(5)
 tree.insert(9)
 tree.insert(3)
@@ -162,4 +175,5 @@ tree.insert(6)
 tree.insert(2)
 tree.insert(1)
 
-console.log(tree)
+
+console.log(tree.printTree());
