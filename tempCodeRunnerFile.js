@@ -1,1 +1,2 @@
-filaDePessoas.peek()
+
+var removeElement = function(nums, val) {
