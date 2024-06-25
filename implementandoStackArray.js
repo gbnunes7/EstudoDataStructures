@@ -9,7 +9,7 @@ class Stack {
     }
 
     remove(element) {
-        this.items.pop(element)
+        this.items.pop
     }
 
     peek() {
@@ -43,3 +43,4 @@ pilhaDeLivro.add("O arrombado")
 
 
 console.log(pilhaDeLivro.isEmpty())
+
