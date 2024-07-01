@@ -4,8 +4,8 @@
 
 let mapLivros = new Map() // instanciando map a uma variável
 
-mapLivros.set("a bela e a fera", 1) // método feito para adicionar um item ao map
-mapLivros.set("chapeuzinho vermelho", 2) 
+mapLivros.set(1,"a bela e a fera") // método feito para adicionar um item ao map (chave e valor)
+mapLivros.set(2,"chapeuzinho vermelho") 
 console.log(mapLivros.get("chapeuzinho vermelho")) // método para retornar o value de uma chave
 console.log(mapLivros.has("a bela e a fera")) // método para retornar em boolean se existe essa chave
 mapLivros.delete("a bela e a fera") // método para remover item (chave-valor) do objeto
@@ -15,3 +15,17 @@ console.log(mapLivros.size) // propriedade para retornar quantos itens tem no Ma
 mapLivros.set("chapeuzinho vermelho", 2) 
 mapLivros.set("a bela e a fera", 1) 
 console.log(mapLivros)
+
+
+let k = 10
+let y = 0
+let x = 0
+while (y < 10) {
+    k = k - 2 
+
+    y = y + 3 
+
+   x = 1 - (y * k)
+}
+
+console.log(k,y,x)

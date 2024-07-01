@@ -1,2 +1,2 @@
-
-var removeElement = function(nums, val) {
+const dicionario = new Map()
+console.log(dicionario)

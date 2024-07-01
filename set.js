@@ -41,7 +41,6 @@ setB.add(25)
 
 console.log(intersection(setA,setB))
 console.log(union(setA,setB))
-
 console.log(difference(setA,setB))
 
 
